@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+</head>
+
+<body>
+    <header>
+        <h1>Task Manager</h1>
+    </header>
+    <main>
+        <div id="stats-container" class="mt-4">
+            <h2>My Tasks</h2>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">Task</th>
+                        <th scope="col">Level of Importance</th>
+                        <th scope="col">Done?</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+        <section>
+            <h2>Add Task</h2>
+            <div class="flex-item">
+                <form id="myForm" class="form-container">
+                    <label for="task">Task:</label>
+                    <input type="text" id="task" name="task"><br><br>
+                    <label for="importance">Level of Importance:</label>
+                    <input type="text" id="name" name="name"><br><br>
+                    <button type="submit">Add Task</button>
+                </form>
+        </section>
+        <script>
+            function save_data() {
+                var input = document.getElementById("saveServer");
+                localStorage.setItem("server", input.value); 
+                var storedValue = localStorage.getItem("server");
+            }
+        </script>
+
+</body>
+
+</html>
